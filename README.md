@@ -1,3 +1,25 @@
+# RLE Enterprises website
+
+## Running on Unraid (Docker)
+
+Every push to `main` builds and publishes a Docker image to:
+
+```
+ghcr.io/fknkuhn/rle_website:latest
+```
+
+1. In Unraid, go to **Docker → Add Container**.
+2. **Repository:** `ghcr.io/fknkuhn/rle_website:latest`
+3. Add a port mapping: container port `3000` → any host port (e.g. `3000`).
+4. Add the environment variables from `.env.example` (Cloudinary and Gmail values).
+5. Put it behind your reverse proxy (Nginx Proxy Manager, SWAG or a Cloudflare Tunnel) for HTTPS. Set `CLIENT_IP_HEADER` to `x-real-ip` for NPM/SWAG or `cf-connecting-ip` for Cloudflare.
+
+Or copy `unraid/rle-website.xml` to `/boot/config/plugins/dockerMan/templates-user/` on the server and pick **rle-website** from the template list; it has all the fields filled in.
+
+The Cloudinary cloud name is baked into the gallery page at build time, so set it once in GitHub under **Settings → Secrets and variables → Actions → Variables** as `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`.
+
+---
+
 # Next.js & HeroUI Template
 
 This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>rle-website</Name>
+  <Repository>ghcr.io/fknkuhn/rle_website:latest</Repository>
+  <Registry>https://github.com/FknKuhn/RLE_Website/pkgs/container/rle_website</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/FknKuhn/RLE_Website</Support>
+  <Project>https://github.com/FknKuhn/RLE_Website</Project>
+  <Overview>RLE Enterprises website (Next.js). Put it behind a reverse proxy (Nginx Proxy Manager, SWAG, Caddy or a Cloudflare Tunnel) for HTTPS.</Overview>
+  <Category>Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/FknKuhn/RLE_Website/main/public/images/RLELogo.png</Icon>
+  <Config Name="Web Port" Target="3000" Default="3000" Mode="tcp" Description="Port the site listens on" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="Cloudinary API key" Target="CLOUDINARY_API_KEY" Default="" Description="Gallery: Cloudinary API key" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Cloudinary API secret" Target="CLOUDINARY_API_SECRET" Default="" Description="Gallery: Cloudinary API secret" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Cloudinary cloud name" Target="NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME" Default="" Description="Gallery: Cloudinary cloud name (server side)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Gmail user" Target="GMAIL_USER" Default="" Description="Contact form: Gmail address that sends mail" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Gmail app password" Target="GMAIL_APP_PASSWORD" Default="" Description="Contact form: Google App Password (not your normal password)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Gmail to" Target="GMAIL_TO_EMAIL" Default="" Description="Contact form: where messages are delivered" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Client IP header" Target="CLIENT_IP_HEADER" Default="x-real-ip" Description="Header your reverse proxy sets to the real visitor IP. x-real-ip for Nginx Proxy Manager/SWAG, cf-connecting-ip for Cloudflare Tunnel." Type="Variable" Display="advanced" Required="false" Mask="false">x-real-ip</Config>
+</Container>
