@@ -13,7 +13,7 @@ export default function ServicesPage() {
 
   const searchParams = useSearchParams();
   const defaultTab = searchParams.get("tab");
-  const [tab, setTab] = useState(defaultTab)
+  const [tab, setTab] = useState(defaultTab ?? "trucking");
   const handleTabClick = (e: Key) => {
     setTab(e.toString())
     replace(`/services?tab=${e.toString()}`);
