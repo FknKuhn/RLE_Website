@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description: "Trucking, hauling, excavation, crane, oil & gas, towing, dumpster and pilot car services from RLE Enterprises.",
+};
+
 export default function DocsLayout({
   children,
 }: {

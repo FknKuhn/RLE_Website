@@ -1,0 +1,18 @@
+# Caddy gets and renews the HTTPS certificate for your domain automatically.
+{$SITE_DOMAIN} {
+	encode zstd gzip
+
+	reverse_proxy web:3000 {
+		# The real visitor IP, taken from the connection itself so it
+		# can't be faked. The site's rate limiter reads this header.
+		header_up X-Real-IP {remote_host}
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		X-Frame-Options "SAMEORIGIN"
+		-Server
+	}
+}

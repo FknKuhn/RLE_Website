@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Contact RLE Enterprises in Moscow, PA. Phone (570) 842-4051.",
+};
+
 export default function AboutLayout({
   children,
 }: {

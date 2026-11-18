@@ -21,16 +21,18 @@ export default function ServicesPage() {
 
   return (
     <div className="flex w-full flex-col justify-center">
+      <h1 className="sr-only">Our Services</h1>
       <Tabs
         color="danger"
         size="lg"
-        aria-label="Options"
+        aria-label="Services"
         variant="bordered"
         classNames={{
           tabList:
-            "gap-2 w-full relative p-2 overflow-x-auto md:flex pt-10md:justify-center bg-default-100 rounded-lg",
+            "gap-2 w-full relative p-2 overflow-x-auto md:flex md:justify-center bg-default-100 rounded-lg",
           cursor: "bg-danger",
           tab: "px-4 py-2 h-10 rounded-md",
+          tabContent: "text-foreground/85 group-data-[selected=true]:text-white",
         }}
         selectedKey={tab}
         onSelectionChange={handleTabClick}
@@ -43,39 +45,39 @@ export default function ServicesPage() {
               </h2>
               <ul className="space-y-2 text-base md:text-lg">
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Specialized Hauling</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Lowboy</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Flatbeds</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Landoll</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Dump trailers</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Hotshots</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Step decks</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Stretch flatbeds</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Tankers</span>
                 </li>
               </ul>
@@ -101,47 +103,47 @@ export default function ServicesPage() {
               </h2>
               <ul className="space-y-2 text-base md:text-lg">
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">
                     Residential & Commercial
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Site Work</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Utility Work</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">
                     Heavy Highway Excavation
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Land Clearing & Grading</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Foundation</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Storm & Sewer</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Demolition</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Grading</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Vacuum Truck</span>
                 </li>
               </ul>
@@ -167,23 +169,23 @@ export default function ServicesPage() {
               </h2>
               <ul className="space-y-2 text-base md:text-lg">
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">
                     Indoor & Outdoor Services
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Cranes 9 Ton to 165 Ton</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">
                     Residential & Commercial
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">
                     Cranes Operated by Licensed Operators
                   </span>
@@ -216,35 +218,35 @@ export default function ServicesPage() {
               </h3>
               <ul className="space-y-2 text-base md:text-lg">
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">American</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Atlas</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Coterra Energy</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Chesapeake</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Exterran</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Seneca Resources</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Superior Energy</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Williams</span>
                 </li>
               </ul>
@@ -256,7 +258,7 @@ export default function ServicesPage() {
                 height={400}
                 width={600}
                 src={siteConfig.Images.OilAndGasImage}
-                alt="Crane Services"
+                alt="Oil and Gas Services"
                 className="rounded-lg object-cover"
               />
             </div>
@@ -275,19 +277,19 @@ export default function ServicesPage() {
               </h3>
               <ul className="space-y-2 text-base md:text-lg">
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Light, Medium & Heavy</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">AAA / FleetNet</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Roadside Service</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">
                     Shop / Mechanic Services
                   </span>
@@ -319,17 +321,17 @@ export default function ServicesPage() {
               </h3>
               <ul className="space-y-2 text-base md:text-lg">
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">10 to 40 Yard</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">
                     Residential & Commercial
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">
                     Serving Households, Builders & More
                   </span>
@@ -357,19 +359,19 @@ export default function ServicesPage() {
               </h2>
               <ul className="space-y-2 text-base md:text-lg">
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">PA Cevos</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Piloting</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Route Surveying</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Variable Message Signs</span>
                 </li>
               </ul>
@@ -380,37 +382,37 @@ export default function ServicesPage() {
               </h2>
               <ul className="space-y-2 text-base md:text-lg">
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Valid Drivers License</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Clean Driving Record</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">Be willing to travel</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">
                     Be willing to work weekends
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">
                     Be capable of using a CB Radio
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">
                     Be able to sit and stand for long periods of time
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-danger text-xl">•</span>
+                  <span aria-hidden="true" className="text-danger text-xl">•</span>
                   <span className="font-semibold">
                     Be able to lift more than 20 lbs
                   </span>

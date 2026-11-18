@@ -1,0 +1,41 @@
+# Production setup: the website plus Caddy, which handles HTTPS automatically
+# and passes the real visitor IP to the site (needed for rate limiting).
+#
+# On the server:
+#   1. cp .env.example .env.production   and fill in the real values
+#   2. point your domain's DNS (A record) at the server's IP
+#   3. docker compose --env-file .env.production up -d --build
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL}
+    env_file: .env.production
+    restart: unless-stopped
+    # No "ports:" on purpose. The site is only reachable through Caddy, so
+    # nobody can bypass it and fake their IP address.
+    expose:
+      - "3000"
+
+  caddy:
+    image: caddy:2.8-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      SITE_DOMAIN: ${SITE_DOMAIN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - web
+
+volumes:
+  caddy_data:
+  caddy_config:

@@ -1,6 +1,42 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+/* Light mode: light grey page, white surfaces, navy text, flag red & blue */
+:root {
+  --bg-dark: #E5E7EB;
+  --bg: #F3F4F6;
+  --bg-light: #FFFFFF;
+  --text: #0A1F3C;
+  --text-muted: #4B5563;
+  --highlight: #D1D5DB;
+  --border: #CBD5E1;
+  --border-muted: #E5E7EB;
+  --primary: #C1121F;
+  --secondary: #0A3161;
+  --danger: #C1121F;
+  --warning: oklch(0.620 0.180 65);
+  --success: oklch(0.620 0.180 145);
+  --info: oklch(0.620 0.180 240);
+}
+
+/* Dark mode: navy surfaces */
+.dark {
+  --bg-dark: #070C17;
+  --bg: #0B1220;
+  --bg-light: #131C2E;
+  --text: #E8ECF3;
+  --text-muted: #9AA6B8;
+  --highlight: #2A3A58;
+  --border: #2A3A58;
+  --border-muted: #1C2740;
+  --primary: #F04A3E;
+  --secondary: #4C7BD9;
+  --danger: #F04A3E;
+  --warning: oklch(0.720 0.200 65);
+  --success: oklch(0.700 0.180 145);
+  --info: oklch(0.700 0.180 240);
+}
+
 @keyframes blob {
   0% {
     transform: translate(0px, 0px) scale(1);
@@ -30,4 +66,16 @@
 
 .animation-delay-6000 {
   animation-delay: 6s;
+}
+
+/* Respect the OS "reduce motion" setting (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

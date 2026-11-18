@@ -1,0 +1,12 @@
+# Keep secrets and local junk out of the Docker image.
+# Secrets are passed in at runtime (see docker-compose.yml).
+.env*
+!.env.example
+.git
+.next
+node_modules
+npm-debug.log*
+.claude
+Dockerfile
+docker-compose.yml
+Caddyfile

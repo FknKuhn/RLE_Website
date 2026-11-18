@@ -14,7 +14,7 @@ export const LinkedInIcon: React.FC<IconSvgProps> = ({
   ...props
 }) => {
   return (
-    <SiLinkedin size={size || width || height} fill="currentColor" {...props} />
+    <SiLinkedin aria-hidden="true" focusable="false" size={size || width || height} fill="currentColor" {...props} />
   );
 };
 
@@ -25,7 +25,7 @@ export const TikTokIcon: React.FC<IconSvgProps> = ({
   ...props
 }) => {
   return (
-    <SiTiktok size={size || width || height} fill="currentColor" {...props} />
+    <SiTiktok aria-hidden="true" focusable="false" size={size || width || height} fill="currentColor" {...props} />
   );
 };
 
@@ -51,7 +51,7 @@ export const FacebookIcon: React.FC<IconSvgProps> = ({
   ...props
 }) => {
   return (
-    <SiFacebook
+    <SiFacebook aria-hidden="true" focusable="false"
       size={size || width || height}
       fill="currentColor" // Use 'color' prop, not 'fill' for react-icons
       {...props}
@@ -66,7 +66,7 @@ export const InstagramIcon: React.FC<IconSvgProps> = ({
   ...props
 }) => {
   return (
-    <SiInstagram
+    <SiInstagram aria-hidden="true" focusable="false"
       size={size || width || height}
       fill="currentColor"
       {...props}

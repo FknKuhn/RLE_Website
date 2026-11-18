@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Join Us",
+  description: "Careers and employment at RLE Enterprises.",
+};
+
 export default function JoinLayout({
   children,
 }: {

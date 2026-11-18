@@ -1,34 +1,25 @@
-"use client";
-import { useRef } from "react";
+import Image from "next/image";
 
 export default function VideoSplash() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
   return (
-    <div className="relative w-full h-[40vh] md:h-[45vh] -mt-10">
-      {/* Video Background */}
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover rounded-xl"
-      >
-        <source src="/videos/RLESplash.mp4" type="video/mp4" />
-      </video>
-
-      {/* Optional: Subtle Dark Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/20 z-[1] rounded-xl" />
-
-      {/* Content Overlay
-    <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-      <img
-        src="/images/RLELogo.png"
-        alt="RLE Enterprises Logo"
-        className="w-[22rem] md:w-[30rem] lg:w-[30rem] mb-6 mt-10 opacity-60"
+    // Full-bleed hero: breaks out of the page container and starts at the very
+    // top so the transparent navbar sits over it
+    // (self-start stops a centering flex parent from shifting it a second time)
+    <div className="relative self-start shrink-0 w-screen ml-[calc(50%-50vw)] -mt-24 h-[75vh] min-h-[420px] overflow-hidden">
+      <Image
+        fill
+        priority
+        alt="RLE Enterprises trucks hauling oversize loads"
+        className="object-cover object-[center_58%]"
+        sizes="100vw"
+        src="/images/RLE_hero.jpg"
       />
-    </div> */}
+
+      {/* Darken the top so the dark-mode navbar stays readable over the sky */}
+      <div className="hidden dark:block absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/60 to-transparent z-[1]" />
+
+      {/* Bottom gradient fade into page background */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background to-transparent z-[2]" />
     </div>
   );
 }

@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Shop",
+  description: "RLE Enterprises merchandise.",
+};
+
 export default function DocsLayout({
   children,
 }: {

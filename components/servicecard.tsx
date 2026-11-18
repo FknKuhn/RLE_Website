@@ -13,7 +13,7 @@ export default function ServiceCard({
   return (
     <Card
       shadow="lg"
-      className={`flex-shrink-0 md:max-w-md border-danger bg-currentcolor bg-gradient-to-t to-white/5 border-l-6 ${className}`}
+      className={`flex-shrink-0 md:max-w-md border-danger bg-[var(--bg-light)] border-l-[6px] ${className}`}
     >
       <CardBody className="p-10">{children}</CardBody>
     </Card>
