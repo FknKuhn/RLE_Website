@@ -16,7 +16,7 @@ ghcr.io/fknkuhn/rle_website:latest
 
 Or copy `unraid/rle-website.xml` to `/boot/config/plugins/dockerMan/templates-user/` on the server and pick **rle-website** from the template list; it has all the fields filled in.
 
-The Cloudinary cloud name is baked into the gallery page at build time, so set it once in GitHub under **Settings → Secrets and variables → Actions → Variables** as `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`.
+The Cloudinary cloud name (`djjwqdxxh`) is baked into the gallery page at build time; it is set as the default in `.github/workflows/docker-publish.yml`. To change it, edit that file or set a repo variable `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`.
 
 ---
 

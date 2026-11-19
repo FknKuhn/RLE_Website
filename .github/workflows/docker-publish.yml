@@ -52,7 +52,7 @@ jobs:
           # Public (non-secret) values baked into the pages at build time.
           # Set them under Settings -> Secrets and variables -> Actions -> Variables.
           build-args: |
-            NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ vars.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
+            NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ vars.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || 'djjwqdxxh' }}
             NEXT_PUBLIC_SITE_URL=${{ vars.NEXT_PUBLIC_SITE_URL || 'https://www.rleenterprises.com' }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
